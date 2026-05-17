@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Drive Alert Maze</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="introScreen" class="introScreen">
+    <div class="introGlow glowOne"></div>
+    <div class="introGlow glowTwo"></div>
+
+    <div class="introCard">
+      <div class="logoHalo">
+        <img src="assets/logo.png" class="introLogo" alt="Intelligent Driver Drowsiness Detection logo" />
+      </div>
+      <p class="welcomeTag">Welcome to</p>
+      <h1 class="introTitle">Drive Alert Maze</h1>
+      <p class="introText">
+        A smart interactive maze inspired by our project<br>
+        <b>Intelligent Driver Drowsiness Detection using Deep Learning</b>
+      </p>
+
+      <div class="introMiniRoad">
+        <span></span><span></span><span></span>
+        <img src="assets/car_transparent.png" alt="Car character" />
+      </div>
+
+      <button id="enterBtn" class="enterBtn">Start Experience</button>
+      <p class="introHint">Drive safely • Stay awake • Reach the destination</p>
+    </div>
+  </section>
+
+  <main id="gameApp" class="app">
+    <section class="panel">
+      <img src="assets/logo.png" class="logo" alt="Intelligent Driver Drowsiness Detection logo" />
+      <h1>Drive Alert Maze</h1>
+      <p class="subtitle">Reach the Safe Destination while avoiding drowsiness signs.</p>
+
+      <div class="stats">
+        <div><span id="score">0</span><small>Alert Points</small></div>
+        <div><span id="lives">3</span><small>Focus Lives</small></div>
+        <div><span id="time">60</span><small>Seconds</small></div>
+      </div>
+
+      <div class="instructions">
+        <b>How to play</b>
+        <p>
+          Use the arrow keys on laptop, or touch buttons on mobile to move the car.<br><br>
+          👁️ Increase points<br>
+          ☕ Restore hearts<br>
+          💤 Remove points and hearts<br><br>
+          Reach the finish line safely 🏁
+        </p>
+      </div>
+
+      <button id="startBtn">Start Game</button>
+      <button id="restartBtn">Restart</button>
+    </section>
+
+    <section class="gameWrap">
+      <div class="canvasStage">
+        <canvas id="game" width="840" height="600"></canvas>
+        <div id="overlay" class="overlay show">
+          <div class="card">
+            <h2>Ready to Drive?</h2>
+            <p>Stay awake, collect alerts, and reach the finish line safely.</p>
+            <p class="hint">Press Start Game</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="touchControls" aria-label="Touch controls">
+        <button class="touchBtn up" data-key="ArrowUp" aria-label="Move up">▲</button>
+        <button class="touchBtn left" data-key="ArrowLeft" aria-label="Move left">◀</button>
+        <button class="touchBtn down" data-key="ArrowDown" aria-label="Move down">▼</button>
+        <button class="touchBtn right" data-key="ArrowRight" aria-label="Move right">▶</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
